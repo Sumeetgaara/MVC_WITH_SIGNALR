@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="masterModelStoreContainer" CdmEntityContainer="masterEntities1">
+    <EntitySetMapping Name="Games">
+      <EntityTypeMapping TypeName="masterModel.Game">
+        <MappingFragment StoreEntitySet="Games">
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Url" ColumnName="Url" />
+          <ScalarProperty Name="Platform" ColumnName="Platform" />
+          <ScalarProperty Name="Score" ColumnName="Score" />
+          <ScalarProperty Name="Genre" ColumnName="Genre" />
+          <ScalarProperty Name="Editors_choice" ColumnName="Editors_choice" />
+          <ScalarProperty Name="Release_year" ColumnName="Release_year" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

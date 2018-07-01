@@ -1,0 +1,38 @@
+﻿@model IEnumerable<MVCWITHSIGNALR.Models.Game>
+
+<h2>MVC WITH SIGNALR~WHAT A TITLE</h2>
+<br />
+<br />
+<br />
+@section scripts {
+ <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<script src="~/Scripts/jquery.signalR-2.3.0.min.js"></script>
+<script src="~/signalr/hubs"></script>
+<script src="~/Scripts/bootstrap.js"></script>
+<script src="~/Scripts/bootstrap.min.js"></script>
+    <!--SignalR script to update the chat page and send messages.-->
+    <script>
+        $(function () {
+            // Reference the auto-generated proxy for the hub.
+            var chat = $.connection.myHub;
+            chat.client.SendAsync = function (response) {
+               alert(response);
+                
+            };
+            // Start the connection.
+            $.connection.hub.start().done(function () {
+                console.log("Connected");
+            });
+        });
+    </script>
+}
+    @foreach (var item in Model)
+    {
+            <div class="well">
+                <p class="card-text">@Html.DisplayFor(modelItem => item.Title)</p>
+            </div>
+            <br />
+    }
+   
+
+
